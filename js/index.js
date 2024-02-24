@@ -39,18 +39,51 @@
  *? це число (у першу, другу, третю чи четверту).
  */
 
-const min = 29;
+// const min = 29;
 
-function isTime(minutes) {
-  if (minutes > 0 && minutes <= 15) {
-    return "Перша чверть";
-  } else if (minutes > 15 && minutes <= 30) {
-    return "Дурга чверть";
-  } else if (minutes > 30 && minutes <= 45) {
-    return "Дурга чверть";
+// function isTime(minutes) {
+//   if (minutes > 0 && minutes <= 15) {
+//     return "Перша чверть";
+//   } else if (minutes > 15 && minutes <= 30) {
+//     return "Дурга чверть";
+//   } else if (minutes > 30 && minutes <= 45) {
+//     return "Дурга чверть";
+//   } else {
+//     return "Четверта чверть";
+//   }
+// }
+
+// console.log(isTime(min));
+
+/**
+*? Напишіть код, який запитуватиме
+*? логін за допомогою prompt та логувати результат
+*? у консоль браузера
+    
+*? Якщо відвідувач вводить "Адмін",
+*? то prompt запитує пароль.
+*? Якщо нічого не ввели або натиснуто клавішу Esc
+*? вивести рядок "Скасовано"
+*? В іншому випадку вивести рядок "Я вас не знаю"
+    
+*? Пароль перевіряти так:
+*? Якщо введено пароль "Я головний",
+*? то вивести рядок "Здрастуйте!"
+*? інакше виводити рядок "Невірний пароль!"
+ */
+
+const login = prompt("enter login");
+console.log(login);
+if (login === "Admin") {
+  const password = prompt("enter password");
+  console.log(password);
+  if (password === "Я головний") {
+    alert("Здрастуйте!");
   } else {
-    return "Четверта чверть";
+    alert("Невірний пароль!");
   }
+} else if (login === "" || login === null) {
+  alert("canceled");
+} else {
+  alert("Я вас не знаю");
 }
-
-console.log(isTime(min));
