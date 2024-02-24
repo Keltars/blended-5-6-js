@@ -72,18 +72,33 @@
 *? інакше виводити рядок "Невірний пароль!"
  */
 
-const login = prompt("enter login");
-console.log(login);
-if (login === "Admin") {
-  const password = prompt("enter password");
-  console.log(password);
-  if (password === "Я головний") {
-    alert("Здрастуйте!");
-  } else {
-    alert("Невірний пароль!");
-  }
-} else if (login === "" || login === null) {
-  alert("canceled");
+// const login = prompt("enter login");
+// console.log(login);
+// if (login === "Admin") {
+//   const password = prompt("enter password");
+//   console.log(password);
+//   if (password === "Я головний") {
+//     alert("Здрастуйте!");
+//   } else {
+//     alert("Невірний пароль!");
+//   }
+// } else if (login === "" || login === null) {
+//   alert("canceled");
+// } else {
+//   alert("Я вас не знаю");
+// }
+/**
+ *? Використовуючи функцію if...else,
+ *? напишіть код, який запитуватиме:
+ *? "Яка офіційна назва JavaScript?"
+ *? Якщо користувач вводить "ECMAScript",
+ *? то показати через alert: "Вірно!"
+ *? інакше відобразити:"Не знаєте? ECMAScript!"
+ */
+
+const answer = prompt("Яка офіційна назва JavaScript?");
+if (answer === "ECMAScript") {
+  alert("Вірно!");
 } else {
-  alert("Я вас не знаю");
+  alert("Не знаєте? ECMAScript!");
 }
