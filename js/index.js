@@ -20,15 +20,37 @@
 //  Напишіть функцію з ім'ям "checkAge", яка приймає один параметр "вік" і перевіряє, чи є цей вік дорослим (більше або дорівнює 18).
 //  Функція повинна повертати true, якщо вік дорослий, і false в іншому випадку.Викличте цю функцію, передаючи змінну "userAge", і виведіть результат в консоль.
 
-const userAge = 23;
+// const userAge = 23;
 
-function checkAge(age) {
-  //   return age >= 18;
-  if (age >= 18) {
-    return true;
+// function checkAge(age) {
+//   //   return age >= 18;
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(checkAge(userAge));
+
+/**
+ *? У змінній min лежить число від 0 до 59.
+ *? Визначте, в яку чверть години потрапляє
+ *? це число (у першу, другу, третю чи четверту).
+ */
+
+const min = 29;
+
+function isTime(minutes) {
+  if (minutes > 0 && minutes <= 15) {
+    return "Перша чверть";
+  } else if (minutes > 15 && minutes <= 30) {
+    return "Дурга чверть";
+  } else if (minutes > 30 && minutes <= 45) {
+    return "Дурга чверть";
   } else {
-    return false;
+    return "Четверта чверть";
   }
 }
 
-console.log(checkAge(userAge));
+console.log(isTime(min));
