@@ -105,3 +105,36 @@
 // console.log(result);
 
 // lkasjn;
+
+
+//TODO: 8 ===================================
+//* Конструкція switch
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+
+const drink = prompt ("Choise your drink").toLocaleLowerCase ();
+
+function orderDrink (drink) {
+    let price = 0;
+    switch (drink) {
+        case "cofe" : 
+        price = 50;
+        break;
+        
+        case "tea" : 
+        price = 30;
+        break;
+
+        case "juce" : 
+        price = 40;
+        break;
+
+        default: 
+
+        alert ("Error");
+        
+    }
+    alert (`Your order ${price} UA `)
+} 
+
+orderDrink (drink);
