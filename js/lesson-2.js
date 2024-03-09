@@ -56,3 +56,50 @@
 // } else {
 //   console.log("Error");
 // }
+
+//* Цикл while and do while
+// TODO: 4 ===================================
+// Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо відвідувач ввів інше число - попросити
+// ввести ще раз і так далі.
+// Цикл має питати число, поки відвідувач не
+// введе число більше 100, або натисне кнопку
+// скасування в prompt
+
+// const number = 1000;
+// let count = 0;
+
+// while (number >= count) {
+//   console.log(count);
+//   count += 1;
+// }
+
+// let num = Number.parseFloat(prompt("enter number"));
+
+// while (num < 100) {
+//   num = Number.parseFloat(prompt("enter number"));
+// }
+// alert(12);
+// console.log(12);
+
+//TODO: 7 ===================================
+//Напишіть цикл, який виводить у консоль
+// числа від max до min за спаданням
+// Додайте усі парні числа від min до max
+
+// const min = 0;
+// const max = 12;
+// let result = 0;
+// for (let i = max; i >= min; i -= 1) {
+//   //   if (i % 2 === 0) {
+//   //     console.log(i);
+//   //       result += i;
+
+//   //   }
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+//   result += i;
+// }
+// console.log(result);
