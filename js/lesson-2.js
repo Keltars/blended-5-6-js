@@ -106,35 +106,73 @@
 
 // lkasjn;
 
-
 //TODO: 8 ===================================
 //* Конструкція switch
 // Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
 // та залежно від виду напою оголоси суму досплати.Використовувати switch.
 
-const drink = prompt ("Choise your drink").toLocaleLowerCase ();
+// const drink = prompt ("Choise your drink").toLocaleLowerCase ();
 
-function orderDrink (drink) {
-    let price = 0;
-    switch (drink) {
-        case "cofe" : 
-        price = 50;
-        break;
-        
-        case "tea" : 
-        price = 30;
-        break;
+// function orderDrink (drink) {
+//     let price = 0;
+//     switch (drink) {
+//         case "cofe" :
+//         price = 50;
+//         break;
 
-        case "juce" : 
-        price = 40;
-        break;
+//         case "tea" :
+//         price = 30;
+//         break;
 
-        default: 
+//         case "juce" :
+//         price = 40;
+//         break;
 
-        alert ("Error");
-        
-    }
-    alert (`Your order ${price} UA `)
-} 
+//         default:
 
-orderDrink (drink);
+//         alert ("Error");
+
+//     }
+//     alert (`Your order ${price} UA `)
+// }
+
+// orderDrink (drink);
+
+// ! Масиви і функції
+//TODO:=========task-01=================
+// Створіть масив styles з елементами «Джаз» та «Блюз».
+// Додайте "Рок-н-рол" в кінець.
+// Замініть значення "Блюз" на "Класика".
+// Видалить перший елемент масиву і виведіть його в консоль.
+// Вставте «Реп» і «Реггі» на початок масиву.
+
+// const styles = ["Jazz", "Blues"];
+
+// styles.push("Rock`n`roll");
+
+// console.log(styles[1]);
+
+// styles.unshift("Rock");
+
+// const index = styles.indexOf("Blues");
+
+// styles[index] = "Classic";
+
+// console.log(styles.includes("Jazz"));
+
+// styles.shift();
+
+// console.log(styles);
+
+///TODO:=============task-02=================
+// напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+function sumArray(array) {
+  const newArray = [];
+  for (let i = 0; i < array.length - 1; i++) {
+    newArray.push(array[i] + array[i + 1]);
+  }
+  return newArray;
+}
+console.log(sumArray(someArr));
