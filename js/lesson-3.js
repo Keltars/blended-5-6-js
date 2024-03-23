@@ -70,20 +70,31 @@
 
 
 
-const concerts = {
-  Київ: new Date("2020-04-01"),
-  Умань: new Date("2025-07-02"),
-  Вінниця: new Date("2020-04-21"),
-  Одеса: new Date("2025-03-15"),
-  Хмельницький: new Date("2020-04-18"),
-  Харків: new Date("2025-07-10"),
-};
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2025-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2025-03-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2025-07-10"),
+// };
 
-const getFutureConcert = concerts => {
-    const cities = Object.keys(concerts);
-    const filterCities = cities.filter(city => concerts[city] > new Date());
-    const namesSortes = filterCities.toSorted((a, b) => concerts[a] - concerts[b]);
-    return namesSortes;
-}
+// const getFutureConcert = concerts => {
+//     const cities = Object.keys(concerts);
+//     const filterCities = cities.filter(city => concerts[city] > new Date());
+//     const namesSortes = filterCities.toSorted((a, b) => concerts[a] - concerts[b]);
+//     return namesSortes;
+// }
 
-console.log(getFutureConcert(concerts));
+// console.log(getFutureConcert(concerts));
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+console.log(checkBrackets(someFn));
