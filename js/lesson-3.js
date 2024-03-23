@@ -57,3 +57,33 @@
 // };
 
 // console.log(calculateTags(tweets));
+
+
+
+// ? З об'єкту concerts потрібно отримати масив
+//  *? в якому будуть лише імена міст.
+//  *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+//  *? відсортувати їх у хронологічному порядку.
+//  *? Результат вивести у консоль.
+//  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+//  */
+
+
+
+const concerts = {
+  Київ: new Date("2020-04-01"),
+  Умань: new Date("2025-07-02"),
+  Вінниця: new Date("2020-04-21"),
+  Одеса: new Date("2025-03-15"),
+  Хмельницький: new Date("2020-04-18"),
+  Харків: new Date("2025-07-10"),
+};
+
+const getFutureConcert = concerts => {
+    const cities = Object.keys(concerts);
+    const filterCities = cities.filter(city => concerts[city] > new Date());
+    const namesSortes = filterCities.toSorted((a, b) => concerts[a] - concerts[b]);
+    return namesSortes;
+}
+
+console.log(getFutureConcert(concerts));
