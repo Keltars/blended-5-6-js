@@ -17,9 +17,6 @@ alertBtnEl.addEventListener("click", () => {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 
-<button id="swapButton">SWAP ME</button>
-      <input id="leftSwapInput" type="text" value="???" />
-      <input id="rightSwapInput" type="text" value="!!!" />
 */
 
 const swapButtonEl = document.querySelector("#swapButton");
@@ -80,7 +77,20 @@ increaseBtnEl.addEventListener("click", () => {
 /*
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
+
 */
+
+addEventListener("click", (event) => 
+{
+    if (event.target.id === "place") {
+    console.log (true);
+  }
+  else {
+    console.log (false);
+  }
+  }
+)
+
 
 //TODO:==============================================
 /*
