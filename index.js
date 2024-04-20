@@ -22,21 +22,17 @@ alertBtnEl.addEventListener("click", () => {
       <input id="rightSwapInput" type="text" value="!!!" />
 */
 
-const swapButtonEl = document.querySelector ("#swapButton");
-const leftSwapInputEl = document.querySelector ("#leftSwapInput");
-const rightSwapInputEl = document.querySelector ("#rightSwapInput");
+const swapButtonEl = document.querySelector("#swapButton");
+const leftSwapInputEl = document.querySelector("#leftSwapInput");
+const rightSwapInputEl = document.querySelector("#rightSwapInput");
 
-swapButtonEl.addEventListener ("click", () => {
+swapButtonEl.addEventListener("click", () => {
   const leftInputValue = leftSwapInputEl.value;
   const rightInputValue = rightSwapInputEl.value;
 
-  
   leftSwapInputEl.value = rightInputValue;
   rightSwapInputEl.value = leftInputValue;
-
-})
-
-
+});
 
 //TODO:==============================================
 /*
@@ -49,24 +45,36 @@ const passwordInputEl = document.querySelector("#passwordInput");
 const passwordButtontEl = document.querySelector("#passwordButton");
 
 passwordButtontEl.addEventListener("click", () => {
-  
   if (passwordButtontEl.textContent === "Розкрити") {
-    passwordInputEl.setAttribute("type", "text")
-  passwordButtontEl.textContent = "Приховати"
+    passwordInputEl.setAttribute("type", "text");
+    passwordButtontEl.textContent = "Приховати";
   } else {
-    passwordInputEl.setAttribute("type", "password")
-  passwordButtontEl.textContent = "Розкрити"
+    passwordInputEl.setAttribute("type", "password");
+    passwordButtontEl.textContent = "Розкрити";
   }
-})
-
-
-
+});
 
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
+
+const decreaseBtnEl = document.querySelector("#decrease");
+const increaseBtnEl = document.querySelector("#increase");
+const boxEl = document.querySelector("#box");
+
+decreaseBtnEl.addEventListener("click", () => {
+  const boxSize = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = boxSize - 10 + "px";
+  boxEl.style.height = boxSize - 10 + "px";
+});
+
+increaseBtnEl.addEventListener("click", () => {
+  const boxSize = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = boxSize + 10 + "px";
+  boxEl.style.height = boxSize + 10 + "px";
+});
 
 //TODO:==============================================
 /*
