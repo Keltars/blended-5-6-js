@@ -80,16 +80,16 @@ increaseBtnEl.addEventListener("click", () => {
 
 */
 
-addEventListener("click", (event) => 
-{
-    if (event.target.id === "place") {
-    console.log (true);
-  }
-  else {
-    console.log (false);
-  }
-  }
-)
+// addEventListener("click", (event) => 
+// {
+//     if (event.target.id === "place") {
+//     console.log (true);
+//   }
+//   else {
+//     console.log (false);
+//   }
+//   }
+// )
 
 
 //TODO:==============================================
@@ -97,7 +97,20 @@ addEventListener("click", (event) =>
 Завдання 6
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
+
 */
+
+const doubleBtnEl = document.querySelector("#double");
+const listItemEl = document.querySelectorAll(".listItem");
+doubleBtnEl.addEventListener("click", () =>{
+  
+  listItemEl.forEach(item => {
+    
+    item.textContent = BigInt(item.textContent)**2n
+  })
+})
+
+
 
 //TODO:==============================================
 /*
